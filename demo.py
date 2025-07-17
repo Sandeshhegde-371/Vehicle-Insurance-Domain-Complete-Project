@@ -19,3 +19,8 @@ except Exception as e:
     logging.info(e)
     raise MyException(e, sys) from e  # Raising custom exception with detailed error information
 '''
+
+from src.pipeline.training_pipeline import TrainPipeline
+
+pipeline = TrainPipeline()
+pipeline.run_pipeline()
