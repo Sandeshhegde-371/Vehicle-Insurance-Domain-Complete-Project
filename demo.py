@@ -8,7 +8,7 @@ logging.error("This is an error message")
 logging.critical("This is a critical message")'''
 
 
-#Below code is to check the exception configuration
+'''#Below code is to check the exception configuration
 from src.logger import logging
 from src.exception import MyException
 import sys
@@ -18,3 +18,4 @@ try:
 except Exception as e:
     logging.info(e)
     raise MyException(e, sys) from e  # Raising custom exception with detailed error information
+'''
