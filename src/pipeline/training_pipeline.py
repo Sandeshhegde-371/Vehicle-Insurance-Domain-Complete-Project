@@ -84,19 +84,19 @@ class TrainPipeline:
         except Exception as e:
             raise MyException(e, sys)
         
-    # def start_model_trainer(self, data_transformation_artifact: DataTransformationArtifact) -> ModelTrainerArtifact:
-    #     """
-    #     This method of TrainPipeline class is responsible for starting model training
-    #     """
-    #     try:
-    #         model_trainer = ModelTrainer(data_transformation_artifact=data_transformation_artifact,
-    #                                      model_trainer_config=self.model_trainer_config
-    #                                      )
-    #         model_trainer_artifact = model_trainer.initiate_model_trainer()
-    #         return model_trainer_artifact
+    def start_model_trainer(self, data_transformation_artifact: DataTransformationArtifact) -> ModelTrainerArtifact:
+        """
+        This method of TrainPipeline class is responsible for starting model training
+        """
+        try:
+            model_trainer = ModelTrainer(data_transformation_artifact=data_transformation_artifact,
+                                         model_trainer_config=self.model_trainer_config
+                                         )
+            model_trainer_artifact = model_trainer.initiate_model_trainer()
+            return model_trainer_artifact
 
-    #     except Exception as e:
-    #         raise MyException(e, sys)
+        except Exception as e:
+            raise MyException(e, sys)
 
     # def start_model_evaluation(self, data_ingestion_artifact: DataIngestionArtifact,
     #                            model_trainer_artifact: ModelTrainerArtifact) -> ModelEvaluationArtifact:

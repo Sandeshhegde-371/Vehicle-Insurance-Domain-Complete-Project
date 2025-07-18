@@ -112,3 +112,5 @@ class ModelTrainer:
         
         except Exception as e:
             raise MyException(e, sys) from e
+        
+#Training model done successfully
