@@ -62,3 +62,4 @@ class MongoDBClient:
         except Exception as e:
             # Raise a custom exception with traceback details if connection fails
             raise MyException(e, sys)
+        
